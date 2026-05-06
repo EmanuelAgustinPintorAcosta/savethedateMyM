@@ -1,0 +1,448 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --green-dark: #526851;
+  --green-light: #7c9d78;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f0ece6;
+  overflow-x: hidden;
+  font-family: 'EB Garamond', serif;
+  color: #241913;
+}
+
+.invitation {
+  width: 100%;
+  display: grid;
+  gap: 0;
+  padding: 0;
+}
+
+.panel {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0 0.75rem;
+  position: relative;
+  overflow: visible;
+}
+
+.card {
+  width: min(100vw, calc(100dvh * 1241 / 1747));
+  max-width: 760px;
+  aspect-ratio: 1241 / 1747;
+  position: relative;
+  overflow: hidden;
+  container-type: size;
+}
+
+.card-01 {
+  overflow: visible;
+}
+
+.paper,
+.silhouette,
+.bouquet,
+.orn {
+  position: absolute;
+  display: block;
+}
+
+.paper {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.card-01 .silhouette {
+  left: 9.99%;
+  top: 20.67%;
+  width: 81.56%;
+  height: 77.41%;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.card-01 .leaf-acosta {
+  position: absolute;
+  left: 50%;
+  bottom: -39%;
+  width: 72%;
+  z-index: 2;
+  transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
+  transform-origin: center top;
+  object-fit: contain;
+  animation: leafSway 5.2s ease-in-out infinite;
+}
+
+.card p,
+.card h1,
+.card .top-message,
+.card .days-counter,
+.card .dias-badge {
+  z-index: 7;
+}
+
+.card-01 .mono {
+  position: absolute;
+  left: 50%;
+  top: 3.4%;
+  transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
+  margin: 0;
+  font-size: 6cqw;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--green-light);
+}
+
+.card-01 .save-the-date {
+  position: absolute;
+  left: 8.33%;
+  top: 12.65%;
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 17.1cqw;
+  line-height: 1;
+  color: var(--green-dark);
+}
+
+.panel-02 .leaf-bridge {
+  position: absolute;
+  left: 50%;
+  bottom: -22%;
+  width: clamp(220px, 30vw, 430px);
+  transform: translateX(-50%);
+  transform-origin: bottom center;
+  animation: leafDriftInCentered 900ms ease-out both, leafSwayCentered 4.6s ease-in-out 1s infinite;
+  z-index: 5;
+}
+
+.card-02 p {
+  position: absolute;
+  margin: 0;
+}
+
+.card-02 .initial,
+.card-02 .name,
+.card-02 .ampersand {
+  font-family: 'Great Vibes', cursive;
+  color: var(--green-dark);
+  line-height: 1;
+}
+
+.card-02 .initial {
+  color: var(--green-light);
+}
+
+.card-02 .m1 {
+  left: 21.43%;
+  top: 15%;
+  font-size: 21.72cqw;
+}
+
+.card-02 .m2 {
+  left: 29.79%;
+  top: 28.21%;
+  font-size: 21.72cqw;
+}
+
+.card-02 .name-top {
+  left: 51.92%;
+  top: 17.88%;
+  font-size: 14.44cqw;
+}
+
+.card-02 .name-bottom {
+  left: 59.75%;
+  top: 30.16%;
+  font-size: 14.44cqw;
+}
+
+.card-02 .ampersand {
+  left: 19.11%;
+  top: 25.19%;
+  font-size: 14.44cqw;
+}
+
+.card-02 .date-large {
+  left: 50%;
+  top: 45.10%;
+  transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
+  font-size: 13.03cqw;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--green-dark);
+  white-space: nowrap;
+}
+
+.card-02 .date-small {
+  left: 50%;
+  top: 56.9%;
+  transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
+  font-size: 3.76cqw;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.card-02 .invite-text {
+  left: 50%;
+  top: 71.4%;
+  transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
+  width: 76%;
+  text-align: center;
+  font-size: 5.3cqw;
+  line-height: 1.28;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.card-03 .bouquet {
+  left: 10.9%;
+  top: 20.01%;
+  width: 78.14%;
+  height: 55.10%;
+  object-fit: contain;
+}
+
+.card-03 .orn-top-left {
+  left: 14.96%;
+  top: 5.25%;
+  width: 10.32%;
+  height: 5.72%;
+}
+
+.card-03 .orn-middle {
+  left: 43.16%;
+  top: 33.80%;
+  width: 13.59%;
+  height: 2.32%;
+}
+
+.card-03 .orn-bottom {
+  left: 43.52%;
+  top: 71.1%;
+  width: 13.59%;
+  height: 2.32%;
+}
+
+.card-03 .line,
+.card-03 .solo-faltan,
+.card-03 .dias,
+.card-03 .te-esperamos,
+.card-03 .days-counter {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #261a14;
+}
+
+.card-03 .top-message {
+  position: absolute;
+  left: 50%;
+  top: 11.1%;
+  transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
+  width: 64%;
+  padding: 2.2% 2.4% 2.5%;
+  background: color-mix(in srgb, var(--green-dark) 86%, #ffffff 14%);
+  border-radius: 0.25rem;
+}
+
+.card-03 .line {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 5.3cqw;
+  color: #ffffff;
+}
+
+.card-03 .top-line-1 {
+  position: static;
+  transform: none;
+  left: auto;
+  margin: 0;
+}
+
+.card-03 .top-line-2 {
+  position: static;
+  transform: none;
+  left: auto;
+  margin: 0;
+}
+
+.card-03 .solo-faltan {
+  top: 36.76%;
+  font-size: 5.12cqw;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--green-light);
+  --reveal-base-transform: translateX(-50%);
+}
+
+.card-03 .days-counter {
+  top: 47.2%;
+  font-size: 21cqw;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--green-dark);
+  font-family: 'EB Garamond', serif;
+  --reveal-base-transform: translateX(-50%);
+}
+
+.card-03 .dias-badge {
+  position: absolute;
+  left: 50%;
+  top: 62.4%;
+  transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
+  min-width: 20%;
+  padding: 1.1% 2.8% 1.35%;
+  background: color-mix(in srgb, var(--green-dark) 86%, #ffffff 14%);
+  border-radius: 0.22rem;
+  text-align: center;
+}
+
+.card-03 .dias {
+  position: static;
+  transform: none;
+  left: auto;
+  margin: 0;
+  font-size: 4.1cqw;
+  font-style: italic;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.card-03 .te-esperamos {
+  top: 78.89%;
+  font-size: 5.1cqw;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--green-dark);
+  --reveal-base-transform: translateX(-50%);
+}
+
+.reveal {
+  --reveal-base-transform: none;
+  opacity: 0;
+  transform: var(--reveal-base-transform) translateY(18px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--d, 0ms);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: var(--reveal-base-transform) translateY(0);
+}
+
+@keyframes leafDriftIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px) translateY(14px) rotate(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes leafDriftInCentered {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(14px) rotate(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes leafSway {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+
+@keyframes leafSwayAlt {
+  0%,
+  100% {
+    transform: rotate(-3deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-3px);
+  }
+}
+
+@keyframes leafSwayCentered {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-3deg) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) rotate(2deg) translateY(-3px);
+  }
+}
+
+@media (max-width: 640px) {
+  .invitation {
+    padding: 0;
+    gap: 0;
+  }
+
+  .panel {
+    padding: 0 0.25rem;
+  }
+
+  .card-01 .leaf-acosta {
+    width: 78%;
+    bottom: -35%;
+  }
+
+  .panel-02 .leaf-bridge {
+    left: 50%;
+    bottom: -19%;
+    width: clamp(180px, 42vw, 300px);
+  }
+
+  .card-03 .top-message {
+    width: 70%;
+  }
+
+  .card-03 .days-counter {
+    top: 46.8%;
+    font-size: 20.5cqw;
+  }
+
+  .card-03 .dias-badge {
+    top: 62.1%;
+    min-width: 24%;
+  }
+}
