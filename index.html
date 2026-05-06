@@ -25,7 +25,6 @@
         <div class="card card-01">
           <img src="assets/p1_X4_abe3f369bb.jpg" alt="" class="paper" aria-hidden="true" />
           <img src="assets/p1_X8_7e0a933539.png" alt="" class="silhouette" aria-hidden="true" />
-          <img src="HOJA ACOSTA.png" alt="" class="leaf-acosta" aria-hidden="true" />
 
           <p class="mono reveal">M | M</p>
           <h1 class="save-the-date reveal">Save the Date</h1>
@@ -49,7 +48,6 @@
             nosotros en este día tan especial…
           </p>
         </div>
-        <img src="22AHOJA.png" alt="" class="leaf-bridge" aria-hidden="true" />
       </section>
 
       <section class="panel panel-03" aria-label="Diseño 03 con contador">
@@ -125,6 +123,7 @@
         );
 
         reveals.forEach(function (el, index) {
+          el.style.setProperty('--reveal-shift', index % 2 === 0 ? '-34px' : '34px');
           el.style.setProperty('--d', String(index * 55) + 'ms');
           observer.observe(el);
         });
