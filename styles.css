@@ -145,7 +145,7 @@ body {
 }
 
 .card-02 .name-top {
-  left: 51.92%;
+  left: 37.5%;
   top: 22.1%;
   font-size: clamp(2.3rem, 10.5cqw, 4.7rem);
   white-space: nowrap;
@@ -153,7 +153,7 @@ body {
 }
 
 .card-02 .name-bottom {
-  left: 59.75%;
+  left: 45.5%;
   top: 38.4%;
   font-size: clamp(2.3rem, 10.5cqw, 4.7rem);
   white-space: nowrap;
@@ -447,14 +447,14 @@ body {
   }
 
   .card-02 .name-top {
-    left: 50.5%;
+    left: 36%;
     top: 25.7%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
     letter-spacing: -0.04em;
   }
 
   .card-02 .name-bottom {
-    left: 58.2%;
+    left: 44%;
     top: 42.1%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
     letter-spacing: -0.04em;
