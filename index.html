@@ -120,27 +120,14 @@
               }
             });
           },
-          { threshold: 0.15 }
+          { threshold: 0.2 }
         );
 
         reveals.forEach(function (el, index) {
           el.style.setProperty('--reveal-shift', index % 2 === 0 ? '-34px' : '34px');
-          el.style.setProperty('--d', String(index * 65) + 'ms');
+          el.style.setProperty('--d', String(index * 55) + 'ms');
           observer.observe(el);
         });
-
-        window.addEventListener('scroll', function () {
-          const scrolled = window.scrollY;
-          reveals.forEach(function (el, index) {
-            const rect = el.getBoundingClientRect();
-            const isNearViewport = rect.top < window.innerHeight && rect.bottom > 0;
-            if (isNearViewport && scrolled > 0) {
-              const distance = Math.max(0, window.innerHeight - rect.top);
-              const parallaxAmount = distance * 0.02;
-              el.style.setProperty('--parallax', parallaxAmount + 'px');
-            }
-          });
-        }, { passive: true });
       })();
     </script>
   </body>
