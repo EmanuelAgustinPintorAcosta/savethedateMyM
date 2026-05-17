@@ -436,13 +436,13 @@ body {
 
   .card-02 .m1 {
     left: 19%;
-    top: 22%;
+    top: 26%;
     font-size: clamp(2.9rem, 15vw, 4rem);
   }
 
   .card-02 .m2 {
     left: 28%;
-    top: 38.8%;
+    top: 42.8%;
     font-size: clamp(2.9rem, 15vw, 4rem);
   }
 
