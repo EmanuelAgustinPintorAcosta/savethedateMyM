@@ -43,7 +43,15 @@ body {
 }
 
 .panel-02 {
-  margin-top: clamp(-180px, -22vw, -60px);
+  margin-top: clamp(-240px, -30vw, -80px);
+  position: relative;
+  z-index: 2;
+}
+
+.panel-03 {
+  margin-top: clamp(-120px, -15vw, -40px);
+  position: relative;
+  z-index: 3;
 }
 
 .card {
@@ -171,7 +179,7 @@ body {
 
 .card-02 .date-large {
   left: 50%;
-  top: 56.4%;
+  top: 52%;
   transform: translateX(-50%);
   --reveal-base-transform: translateX(-50%);
   font-size: clamp(1.8rem, 8.8cqw, 4rem);
@@ -210,7 +218,7 @@ body {
 .card-02 .solo-faltan {
   position: absolute;
   left: 50%;
-  top: 70%;
+  top: 72%;
   transform: translateX(-50%);
   --reveal-base-transform: translateX(-50%);
   margin: 0;
@@ -225,7 +233,7 @@ body {
 .card-02 .days-counter {
   position: absolute;
   left: 50%;
-  top: 77%;
+  top: 79%;
   transform: translateX(-50%);
   --reveal-base-transform: translateX(-50%);
   margin: 0;
@@ -241,7 +249,7 @@ body {
 .card-02 .dias-badge {
   position: absolute;
   left: 50%;
-  top: 89%;
+  top: 90%;
   transform: translateX(-50%);
   --reveal-base-transform: translateX(-50%);
   min-width: 20%;
@@ -249,6 +257,7 @@ body {
   background: color-mix(in srgb, var(--green-dark) 86%, #ffffff 14%);
   border-radius: 0.22rem;
   text-align: center;
+  z-index: 8;
 }
 
 .card-02 .dias-badge .dias {
@@ -492,61 +501,61 @@ body {
 
   .card-02 .m1 {
     left: 19%;
-    top: 26%;
+    top: 18%;
     font-size: clamp(2.9rem, 15vw, 4rem);
   }
 
   .card-02 .m2 {
     left: 28%;
-    top: 42.8%;
+    top: 34%;
     font-size: clamp(2.9rem, 15vw, 4rem);
   }
 
   .card-02 .name-top {
     left: 42%;
-    top: 25.7%;
+    top: 17.5%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
     letter-spacing: -0.04em;
   }
 
   .card-02 .name-bottom {
     left: 50%;
-    top: 42.1%;
+    top: 33.5%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
     letter-spacing: -0.04em;
   }
 
   .card-02 .ampersand {
     left: 18.8%;
-    top: 33.1%;
+    top: 26%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
   }
 
   .card-02 .date-large {
-    top: 58.6%;
+    top: 49%;
     font-size: clamp(1.45rem, 7.6vw, 2.15rem);
   }
 
   .card-02 .date-small {
-    top: 67.4%;
+    top: 56%;
     width: 82%;
     font-size: clamp(0.88rem, 3.55vw, 1.05rem);
   }
 
   .card-02 .invite-text {
-    top: 60%;
+    top: 57%;
     width: 76%;
     font-size: clamp(0.96rem, 4vw, 1.18rem);
     line-height: 1.5;
   }
 
   .card-02 .solo-faltan {
-    top: 68%;
+    top: 66%;
     font-size: clamp(0.92rem, 4vw, 1.15rem);
   }
 
   .card-02 .days-counter {
-    top: 75%;
+    top: 73%;
     font-size: clamp(3.15rem, 14vw, 4.5rem);
   }
 
