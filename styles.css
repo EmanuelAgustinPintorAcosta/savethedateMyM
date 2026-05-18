@@ -43,13 +43,13 @@ body {
 }
 
 .panel-02 {
-  margin-top: clamp(-360px, -42vw, -180px);
+  margin-top: clamp(-390px, -46vw, -210px);
   position: relative;
   z-index: 2;
 }
 
 .panel-03 {
-  margin-top: clamp(-300px, -34vw, -140px);
+  margin-top: clamp(-240px, -28vw, -120px);
   position: relative;
   z-index: 3;
 }
@@ -77,10 +77,10 @@ body {
 
 .card-01 .silhouette {
   left: 50%;
-  top: 22%;
+  top: 20%;
   transform: translateX(-50%);
-  width: 54%;
-  height: 46%;
+  width: 52%;
+  height: 44%;
   object-fit: contain;
   z-index: 3;
 }
@@ -222,6 +222,7 @@ body {
   width: 54%;
   height: auto;
   transform: translateX(-50%);
+  --reveal-base-transform: translateX(-50%);
   object-fit: contain;
   opacity: 0.34;
   z-index: 1;
@@ -327,7 +328,7 @@ body {
 .card-03 .top-message {
   position: absolute;
   left: 50%;
-  top: 18%;
+  top: 22%;
   transform: translateX(-50%);
   --reveal-base-transform: translateX(-50%);
   width: 68%;
@@ -496,17 +497,17 @@ body {
   }
 
   .card-01 .silhouette {
-    top: 22%;
-    width: 49%;
-    height: 42%;
+    top: 18.5%;
+    width: 47%;
+    height: 39%;
   }
 
   .panel-02 {
-    margin-top: clamp(-430px, -62vw, -230px);
+    margin-top: clamp(-500px, -72vw, -300px);
   }
 
   .panel-03 {
-    margin-top: clamp(-360px, -52vw, -180px);
+    margin-top: clamp(-275px, -40vw, -150px);
   }
 
   .card-01 .mono {
@@ -524,38 +525,38 @@ body {
 
   .card-02 .m1 {
     left: 19%;
-    top: 21.5%;
+    top: 17.8%;
     font-size: clamp(2.9rem, 15vw, 4rem);
   }
 
   .card-02 .m2 {
     left: 28%;
-    top: 37.5%;
+    top: 33.8%;
     font-size: clamp(2.9rem, 15vw, 4rem);
   }
 
   .card-02 .name-top {
     left: 42%;
-    top: 21%;
+    top: 17.2%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
     letter-spacing: -0.04em;
   }
 
   .card-02 .name-bottom {
     left: 50%;
-    top: 37%;
+    top: 33.1%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
     letter-spacing: -0.04em;
   }
 
   .card-02 .ampersand {
     left: 18.8%;
-    top: 29.3%;
+    top: 25.4%;
     font-size: clamp(1.9rem, 10vw, 2.85rem);
   }
 
   .card-02 .date-large {
-    top: 49%;
+    top: 47.8%;
     font-size: clamp(1.45rem, 7.6vw, 2.15rem);
   }
 
@@ -566,30 +567,30 @@ body {
   }
 
   .card-02 .invite-text {
-    top: 57%;
+    top: 58.8%;
     width: 76%;
     font-size: clamp(0.96rem, 4vw, 1.18rem);
     line-height: 1.5;
   }
 
   .card-02 .counter-haze {
-    top: 76.5%;
+    top: 73.8%;
     width: 62%;
     opacity: 0.4;
   }
 
   .card-02 .solo-faltan {
-    top: 66%;
+    top: 68.2%;
     font-size: clamp(0.92rem, 4vw, 1.15rem);
   }
 
   .card-02 .days-counter {
-    top: 73%;
+    top: 73.2%;
     font-size: clamp(3.15rem, 14vw, 4.5rem);
   }
 
   .card-02 .dias-badge {
-    top: 82.5%;
+    top: 82.8%;
     min-width: 28%;
     padding: 1.8% 4.2% 2.1%;
   }
@@ -599,7 +600,7 @@ body {
   }
 
   .card-03 .top-message {
-    top: 14%;
+    top: 20%;
     width: 76%;
     padding: 3% 3.2% 3.4%;
   }
