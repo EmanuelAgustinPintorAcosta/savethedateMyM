@@ -49,7 +49,7 @@ body {
 }
 
 .panel-03 {
-  margin-top: clamp(-240px, -28vw, -120px);
+  margin-top: clamp(-190px, -22vw, -90px);
   position: relative;
   z-index: 3;
 }
@@ -77,10 +77,10 @@ body {
 
 .card-01 .silhouette {
   left: 50%;
-  top: 20%;
+  top: 24%;
   transform: translateX(-50%);
-  width: 52%;
-  height: 44%;
+  width: 50%;
+  height: 40%;
   object-fit: contain;
   z-index: 3;
 }
@@ -216,15 +216,20 @@ body {
 }
 
 .card-02 .counter-haze {
+  display: none;
+}
+
+.card-02::before {
+  content: '';
   position: absolute;
   left: 50%;
-  top: 79%;
-  width: 54%;
-  height: auto;
+  top: 76.5%;
+  width: 50%;
+  height: 16%;
   transform: translateX(-50%);
-  --reveal-base-transform: translateX(-50%);
-  object-fit: contain;
-  opacity: 0.34;
+  background:
+    radial-gradient(ellipse at center, rgba(164, 191, 171, 0.36) 0%, rgba(164, 191, 171, 0.24) 34%, rgba(164, 191, 171, 0.12) 58%, rgba(164, 191, 171, 0) 78%);
+  filter: blur(12px);
   z-index: 1;
   pointer-events: none;
 }
@@ -263,7 +268,7 @@ body {
 .card-02 .dias-badge {
   position: absolute;
   left: 50%;
-  top: 90%;
+  top: 93%;
   transform: translateX(-50%);
   --reveal-base-transform: translateX(-50%);
   min-width: 20%;
@@ -328,7 +333,7 @@ body {
 .card-03 .top-message {
   position: absolute;
   left: 50%;
-  top: 22%;
+  top: 28%;
   transform: translateX(-50%);
   --reveal-base-transform: translateX(-50%);
   width: 68%;
@@ -497,9 +502,9 @@ body {
   }
 
   .card-01 .silhouette {
-    top: 18.5%;
-    width: 47%;
-    height: 39%;
+    top: 22%;
+    width: 44%;
+    height: 35%;
   }
 
   .panel-02 {
@@ -507,7 +512,7 @@ body {
   }
 
   .panel-03 {
-    margin-top: clamp(-275px, -40vw, -150px);
+    margin-top: clamp(-210px, -30vw, -110px);
   }
 
   .card-01 .mono {
@@ -573,10 +578,11 @@ body {
     line-height: 1.5;
   }
 
-  .card-02 .counter-haze {
-    top: 73.8%;
-    width: 62%;
-    opacity: 0.4;
+  .card-02::before {
+    top: 74.8%;
+    width: 60%;
+    height: 18%;
+    filter: blur(10px);
   }
 
   .card-02 .solo-faltan {
@@ -590,7 +596,7 @@ body {
   }
 
   .card-02 .dias-badge {
-    top: 82.8%;
+    top: 86.8%;
     min-width: 28%;
     padding: 1.8% 4.2% 2.1%;
   }
@@ -600,7 +606,7 @@ body {
   }
 
   .card-03 .top-message {
-    top: 20%;
+    top: 26%;
     width: 76%;
     padding: 3% 3.2% 3.4%;
   }
