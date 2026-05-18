@@ -124,7 +124,7 @@
         );
 
         reveals.forEach(function (el, index) {
-          el.style.setProperty('--reveal-shift', index % 2 === 0 ? '-34px' : '34px');
+          el.style.setProperty('--reveal-shift', '0px');
           el.style.setProperty('--d', String(index * 55) + 'ms');
           observer.observe(el);
         });

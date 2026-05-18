@@ -16,7 +16,11 @@ body {
 }
 
 body {
-  background: #f0ece6;
+  background-color: #f0ece6;
+  background-image: url('assets/p1_X4_abe3f369bb.jpg');
+  background-size: 760px auto;
+  background-repeat: repeat-y;
+  background-position: center top;
   overflow-x: hidden;
   font-family: 'EB Garamond', serif;
   color: #241913;
@@ -38,10 +42,6 @@ body {
   overflow: visible;
 }
 
-.panel + .panel .card {
-  margin-top: -1px;
-}
-
 .card {
   width: min(100vw, calc(100dvh * 1241 / 1747));
   max-width: 760px;
@@ -60,11 +60,7 @@ body {
 }
 
 .paper {
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  display: none;
 }
 
 .card-01 .silhouette {
@@ -125,7 +121,9 @@ body {
 .card-02 .ampersand {
   font-family: 'Great Vibes', cursive;
   color: var(--green-dark);
-  line-height: 1;
+  line-height: 1.14;
+  padding-top: 0.06em;
+  text-rendering: optimizeLegibility;
 }
 
 .card-02 .initial {
