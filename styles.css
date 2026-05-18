@@ -42,6 +42,10 @@ body {
   overflow: visible;
 }
 
+.panel-02 {
+  margin-top: clamp(-180px, -22vw, -60px);
+}
+
 .card {
   width: min(100vw, calc(100dvh * 1241 / 1747));
   max-width: 760px;
