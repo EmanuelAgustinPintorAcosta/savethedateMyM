@@ -119,21 +119,27 @@
       .counter-wrap {
         position: relative;
         width: min(95%, 510px);
+        height: clamp(135px, 26vw, 210px);
         display: grid;
         place-items: center;
-        margin-top: 0;
+        margin-top: clamp(-6px, -1vw, -2px);
       }
 
       .humo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: 120%;
         height: auto;
         opacity: 0.68;
-        grid-area: 1 / 1;
+        z-index: 1;
         pointer-events: none;
       }
 
       .days {
-        grid-area: 1 / 1;
+        position: relative;
+        z-index: 2;
         margin: 0;
         font-size: clamp(4rem, 20vw, 8rem);
         line-height: 0.9;
@@ -142,7 +148,7 @@
       }
 
       .dias-badge {
-        margin-top: 0;
+        margin-top: clamp(2px, 0.7vw, 6px);
         background: color-mix(in srgb, var(--green-dark) 88%, #fff 12%);
         color: #fff;
         border-radius: 8px;
