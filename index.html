@@ -4,69 +4,188 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Save the Date</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;1,600&family=Great+Vibes&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;1,600&family=MonteCarlo&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --green-dark: #526851;
+        --green-light: #7c9d78;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: 'EB Garamond', serif;
+        color: var(--green-dark);
+        background: #f0ece6 url('assets/fondo.png') center top / min(100vw, 760px) auto repeat-y;
+        overflow-x: hidden;
+      }
+
+      .page {
+        width: min(100vw, 760px);
+        margin: 0 auto;
+        padding: clamp(16px, 4vw, 28px) clamp(14px, 4vw, 30px) clamp(28px, 7vw, 54px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(10px, 2.8vw, 18px);
+        text-align: center;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 700ms ease, transform 700ms ease;
+      }
+
+      .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .mono {
+        margin: 0;
+        font-size: clamp(1.05rem, 4.5vw, 1.8rem);
+        letter-spacing: 0.1em;
+        color: var(--green-light);
+        font-weight: 600;
+      }
+
+      .title {
+        margin: 0;
+        font-size: clamp(2.2rem, 12vw, 5rem);
+        line-height: 0.95;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--green-dark);
+      }
+
+      .silueta {
+        width: clamp(180px, 50vw, 340px);
+        max-width: 90%;
+        height: auto;
+        display: block;
+      }
+
+      .montecarlo-regular {
+        font-family: 'MonteCarlo', cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .names {
+        margin: 0;
+        font-size: clamp(3.1rem, 18vw, 8rem);
+        line-height: 0.83;
+        color: var(--green-light);
+      }
+
+      .date {
+        margin: 0;
+        font-size: clamp(2.05rem, 11vw, 4.2rem);
+        letter-spacing: 0.11em;
+        font-weight: 600;
+        color: var(--green-dark);
+      }
+
+      .invite {
+        margin: 0;
+        font-size: clamp(1.12rem, 5.2vw, 2rem);
+        font-style: italic;
+        color: var(--green-dark);
+        max-width: 90%;
+      }
+
+      .solo-faltan {
+        margin: 0;
+        font-size: clamp(1.5rem, 7vw, 2.6rem);
+        letter-spacing: 0.08em;
+        color: var(--green-light);
+      }
+
+      .counter-wrap {
+        position: relative;
+        width: min(88%, 430px);
+        display: grid;
+        place-items: center;
+        margin-top: clamp(6px, 1.5vw, 10px);
+      }
+
+      .humo {
+        width: 100%;
+        height: auto;
+        opacity: 0.45;
+        grid-area: 1 / 1;
+        pointer-events: none;
+      }
+
+      .days {
+        grid-area: 1 / 1;
+        margin: 0;
+        font-size: clamp(4rem, 20vw, 8rem);
+        line-height: 0.9;
+        font-weight: 600;
+        color: var(--green-dark);
+      }
+
+      .dias-badge {
+        margin-top: clamp(10px, 2.2vw, 16px);
+        background: color-mix(in srgb, var(--green-dark) 88%, #fff 12%);
+        color: #fff;
+        border-radius: 8px;
+        padding: clamp(8px, 2vw, 12px) clamp(34px, 9vw, 60px);
+        font-size: clamp(1.65rem, 8vw, 2.8rem);
+        font-style: italic;
+        line-height: 1;
+      }
+
+      .soon {
+        margin-top: clamp(20px, 5vw, 34px);
+        width: min(92%, 540px);
+        background: color-mix(in srgb, var(--green-dark) 88%, #fff 12%);
+        color: #fff;
+        border-radius: 8px;
+        padding: clamp(14px, 3vw, 20px) clamp(12px, 4vw, 20px);
+        font-size: clamp(1.35rem, 6.2vw, 2.4rem);
+        font-style: italic;
+        line-height: 1.25;
+      }
+    </style>
   </head>
   <body>
-    <main class="invitation" aria-label="Invitación Save the Date en formato web">
-      <section class="panel" aria-label="Diseño 01">
-        <div class="card card-01">
-          <img src="assets/p1_X4_abe3f369bb.jpg" alt="" class="paper" aria-hidden="true" />
-          <img src="assets/p1_X8_7e0a933539.png" alt="" class="silhouette" aria-hidden="true" />
+    <main class="page" aria-label="Invitación Save the Date">
+      <p class="mono reveal">M | M</p>
+      <h1 class="title reveal">Save the Date</h1>
 
-          <p class="mono reveal">M | M</p>
-          <h1 class="save-the-date reveal">Save the Date</h1>
-        </div>
-      </section>
+      <img src="assets/siluetasinfondo.png" alt="Silueta de la pareja" class="silueta reveal" />
 
+      <p class="names montecarlo-regular reveal">Maxi<br />&amp;<br />Melani</p>
 
-      <section class="panel panel-02" aria-label="Diseño 02">
-        <div class="card card-02">
-          <img src="assets/p1_X4_abe3f369bb.jpg" alt="" class="paper" aria-hidden="true" />
+      <p class="date reveal">31 | 10 | 26</p>
+      <p class="invite reveal">¡Nos encantaría tenerte con nosotros!</p>
 
-          <p class="initial m1 reveal">M</p>
-          <p class="initial m2 reveal">M</p>
-          <p class="name name-top reveal">axi</p>
-          <p class="name name-bottom reveal">elani</p>
-          <p class="ampersand reveal">&amp;</p>
+      <p class="solo-faltan reveal">SOLO FALTAN</p>
 
-          <p class="date-large reveal">31 | 10 | 26</p>
-          <p class="invite-text reveal">¡Nos encantaría tenerte con nosotros!</p>
+      <div class="counter-wrap reveal" aria-live="polite">
+        <img src="assets/humo.png" alt="" class="humo" aria-hidden="true" />
+        <p class="days" id="daysCounter">0</p>
+      </div>
 
-          <img src="assets/p3_X8_679088d742.png" alt="" class="counter-haze reveal" aria-hidden="true" />
+      <p class="dias-badge reveal">DÍAS</p>
 
-          <p class="solo-faltan reveal">SOLO FALTAN:</p>
-          <div class="days-counter reveal" id="daysCounter" aria-live="polite">0</div>
-          <div class="dias-badge reveal">
-            <p class="dias">DÍAS</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel panel-03" aria-label="Diseño 03 con contador">
-        <div class="card card-03">
-          <img src="assets/p1_X4_abe3f369bb.jpg" alt="" class="paper" aria-hidden="true" />
-          <img src="assets/p3_X8_679088d742.png" alt="" class="bouquet" aria-hidden="true" />
-          <img src="assets/p3_X16_bd1d0d0987.png" alt="" class="orn orn-top-left" aria-hidden="true" />
-
-          <div class="top-message reveal">
-            <p class="line top-line-1">Próximamente recibirás</p>
-            <p class="line top-line-2">todos los detalles…</p>
-          </div>
-        </div>
-      </section>
+      <p class="soon reveal">Próximamente recibirás<br />todos los detalles...</p>
     </main>
 
     <script>
@@ -81,48 +200,28 @@
 
         function updateCounter() {
           const now = new Date();
-          const days = Math.max(
-            0,
-            Math.round((startOfDay(targetDate) - startOfDay(now)) / DAY_MS)
-          );
+          const days = Math.max(0, Math.round((startOfDay(targetDate) - startOfDay(now)) / DAY_MS));
           counter.textContent = String(days);
         }
 
         updateCounter();
+        setInterval(updateCounter, 60 * 60 * 1000);
 
-        const msUntilNextDay =
-          new Date(
-            new Date().getFullYear(),
-            new Date().getMonth(),
-            new Date().getDate() + 1,
-            0,
-            0,
-            1
-          ) - new Date();
-
-        setTimeout(function () {
-          updateCounter();
-          setInterval(updateCounter, 60 * 60 * 1000);
-        }, msUntilNextDay);
-
-        const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver(
+        const items = document.querySelectorAll('.reveal');
+        const obs = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
               if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-              } else {
-                entry.target.classList.remove('in-view');
+                entry.target.classList.add('in');
               }
             });
           },
-          { threshold: 0.2 }
+          { threshold: 0.16 }
         );
 
-        reveals.forEach(function (el, index) {
-          el.style.setProperty('--reveal-shift', '0px');
-          el.style.setProperty('--d', String(index * 55) + 'ms');
-          observer.observe(el);
+        items.forEach(function (el, i) {
+          el.style.transitionDelay = i * 60 + 'ms';
+          obs.observe(el);
         });
       })();
     </script>

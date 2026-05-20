@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save the Date</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;1,600&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="invitation" aria-label="Invitación Save the Date en formato web">
+      <section class="panel" aria-label="Diseño 01">
+        <div class="card card-01">
+          <img src="assets/p1_X4_abe3f369bb.jpg" alt="" class="paper" aria-hidden="true" />
+          <img src="assets/p1_X8_7e0a933539.png" alt="" class="silhouette" aria-hidden="true" />
+
+          <p class="mono reveal">M | M</p>
+          <h1 class="save-the-date reveal">Save the Date</h1>
+        </div>
+      </section>
+
+
+      <section class="panel panel-02" aria-label="Diseño 02">
+        <div class="card card-02">
+          <img src="assets/p1_X4_abe3f369bb.jpg" alt="" class="paper" aria-hidden="true" />
+
+          <p class="initial m1 reveal">M</p>
+          <p class="initial m2 reveal">M</p>
+          <p class="name name-top reveal">axi</p>
+          <p class="name name-bottom reveal">elani</p>
+          <p class="ampersand reveal">&amp;</p>
+
+          <p class="date-large reveal">31 | 10 | 26</p>
+          <p class="invite-text reveal">¡Nos encantaría tenerte con nosotros!</p>
+
+          <img src="assets/p3_X8_679088d742.png" alt="" class="counter-haze reveal" aria-hidden="true" />
+
+          <p class="solo-faltan reveal">SOLO FALTAN:</p>
+          <div class="days-counter reveal" id="daysCounter" aria-live="polite">0</div>
+          <div class="dias-badge reveal">
+            <p class="dias">DÍAS</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-03" aria-label="Diseño 03 con contador">
+        <div class="card card-03">
+          <img src="assets/p1_X4_abe3f369bb.jpg" alt="" class="paper" aria-hidden="true" />
+          <img src="assets/p3_X8_679088d742.png" alt="" class="bouquet" aria-hidden="true" />
+          <img src="assets/p3_X16_bd1d0d0987.png" alt="" class="orn orn-top-left" aria-hidden="true" />
+
+          <div class="top-message reveal">
+            <p class="line top-line-1">Próximamente recibirás</p>
+            <p class="line top-line-2">todos los detalles…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const counter = document.getElementById('daysCounter');
+        const targetDate = new Date(2026, 9, 31);
+        const DAY_MS = 1000 * 60 * 60 * 24;
+
+        function startOfDay(d) {
+          return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+        }
+
+        function updateCounter() {
+          const now = new Date();
+          const days = Math.max(
+            0,
+            Math.round((startOfDay(targetDate) - startOfDay(now)) / DAY_MS)
+          );
+          counter.textContent = String(days);
+        }
+
+        updateCounter();
+
+        const msUntilNextDay =
+          new Date(
+            new Date().getFullYear(),
+            new Date().getMonth(),
+            new Date().getDate() + 1,
+            0,
+            0,
+            1
+          ) - new Date();
+
+        setTimeout(function () {
+          updateCounter();
+          setInterval(updateCounter, 60 * 60 * 1000);
+        }, msUntilNextDay);
+
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+              } else {
+                entry.target.classList.remove('in-view');
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        reveals.forEach(function (el, index) {
+          el.style.setProperty('--reveal-shift', '0px');
+          el.style.setProperty('--d', String(index * 55) + 'ms');
+          observer.observe(el);
+        });
+      })();
+    </script>
+  </body>
+</html>
