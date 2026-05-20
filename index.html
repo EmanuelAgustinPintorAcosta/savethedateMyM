@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;1,600&family=MonteCarlo&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;1,600&family=Great+Vibes&family=MonteCarlo&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -66,9 +66,9 @@
       .title {
         margin: 0;
         font-size: clamp(2.2rem, 12vw, 5rem);
-        line-height: 0.95;
-        font-style: italic;
-        font-weight: 600;
+        line-height: 1;
+        font-family: 'Great Vibes', cursive;
+        font-weight: 400;
         color: var(--green-dark);
       }
 
@@ -87,8 +87,9 @@
 
       .names {
         margin: 0;
-        font-size: clamp(3.1rem, 18vw, 8rem);
-        line-height: 0.83;
+        font-size: clamp(2.35rem, 11.2vw, 4.8rem);
+        line-height: 1;
+        white-space: nowrap;
         color: var(--green-light);
       }
 
@@ -117,16 +118,16 @@
 
       .counter-wrap {
         position: relative;
-        width: min(88%, 430px);
+        width: min(95%, 510px);
         display: grid;
         place-items: center;
-        margin-top: clamp(6px, 1.5vw, 10px);
+        margin-top: 0;
       }
 
       .humo {
-        width: 100%;
+        width: 120%;
         height: auto;
-        opacity: 0.45;
+        opacity: 0.68;
         grid-area: 1 / 1;
         pointer-events: none;
       }
@@ -141,7 +142,7 @@
       }
 
       .dias-badge {
-        margin-top: clamp(10px, 2.2vw, 16px);
+        margin-top: 0;
         background: color-mix(in srgb, var(--green-dark) 88%, #fff 12%);
         color: #fff;
         border-radius: 8px;
@@ -171,7 +172,7 @@
 
       <img src="assets/siluetasinfondo.png" alt="Silueta de la pareja" class="silueta reveal" />
 
-      <p class="names montecarlo-regular reveal">Maxi<br />&amp;<br />Melani</p>
+      <p class="names montecarlo-regular reveal">Maxi &amp; Melani</p>
 
       <p class="date reveal">31 | 10 | 26</p>
       <p class="invite reveal">¡Nos encantaría tenerte con nosotros!</p>
